@@ -21,13 +21,13 @@ export default React.createClass({
     if (this.state.age >= 15) {
       message = (
         <div className="alert alert-info" role="alert">
-          <p>{'Ne smiješ ići ispod '}{this.state.age / 2 + 7}{' godina.'}</p>
+          <p>{'You are allowed to go '}{this.state.age / 2 + 7}{' years old and above.'}</p>
         </div>
       );
     } else {
       message = (
         <div className="alert alert-danger" role="alert">
-          <p>{'Premlad si za dejtanje, daj se odi igrati s lego kockama ili nešto.'}</p>
+          <p>{'You\'re too young for dating, go play with lego bricks or something.'}</p>
         </div>
       );
     }
@@ -35,11 +35,11 @@ export default React.createClass({
     return (
       <div>
         <div className="page-header">
-          <h1>Dejting kalkulator</h1>
+          <h1>Dating Calculator</h1>
         </div>
 
         <div className="form-group">
-          <label htmlFor="age">{'Tvoja dob'}</label>
+          <label htmlFor="age">{'Your age'}</label>
           <input
             id="age"
             className="form-control calculator-age"
