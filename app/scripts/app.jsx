@@ -1,4 +1,5 @@
 import React from 'react/addons';
+import Calculator from './calculator';
 
 let App = React.createClass({
   propTypes: {},
@@ -6,7 +7,7 @@ let App = React.createClass({
   render() {
     return (
       <div className="container">
-        <h1>{'\'Sup'}</h1>
+        <Calculator />
       </div>
     );
   }
