@@ -5,17 +5,33 @@ export default React.createClass({
 
   getInitialState() {
     return {
-      age: 0
+      age: 20
     };
   },
 
   handleChange(event) {
     this.setState({
-      age: event.target.value
+      age: parseInt(event.target.value)
     });
   },
 
   render() {
+    let message;
+
+    if (this.state.age >= 15) {
+      message = (
+        <div className="alert alert-info" role="alert">
+          <p>{'Ne smiješ ići ispod '}{this.state.age / 2 + 7}{' godina.'}</p>
+        </div>
+      );
+    } else {
+      message = (
+        <div className="alert alert-danger" role="alert">
+          <p>{'Premlad si za dejtanje, daj se odi igrati s lego kockama ili nešto.'}</p>
+        </div>
+      );
+    }
+
     return (
       <div>
         <div className="page-header">
@@ -32,9 +48,7 @@ export default React.createClass({
             value={this.state.age} />
         </div>
 
-        <div className="alert alert-info" role="alert">
-          <p>{'Ne smiješ ići ispod '}{this.state.age / 2 + 7}{' godina.'}</p>
-        </div>
+        {message}
       </div>
     );
   }
