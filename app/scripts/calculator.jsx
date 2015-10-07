@@ -17,15 +17,24 @@ export default React.createClass({
 
   render() {
     return (
-      <div className="calculator">
-        <input
-          className="calculator-age"
-          placeholder="Tvoje godine"
-          type="number"
-          onChange={this.handleChange}
-          value={this.state.age} />
-        <p>{'Ne smiješ ići ispod:'}</p>
-        <div className="calculator-result">{this.state.age / 2 + 7}{' godina'}</div>
+      <div>
+        <div className="page-header">
+          <h1>Dejting kalkulator</h1>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="age">{'Tvoja dob'}</label>
+          <input
+            id="age"
+            className="form-control calculator-age"
+            type="number"
+            onChange={this.handleChange}
+            value={this.state.age} />
+        </div>
+
+        <div className="alert alert-info" role="alert">
+          <p>{'Ne smiješ ići ispod '}{this.state.age / 2 + 7}{' godina.'}</p>
+        </div>
       </div>
     );
   }
