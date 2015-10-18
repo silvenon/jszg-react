@@ -3,5 +3,7 @@
 For JavaScript Zagreb Meetup.
 
 ```sh
-❯ npm start # open the app and watch files for changes
+❯ npm start # start the server and watch files for changes
 ```
+
+Open [localhost:8080](http://localhost:8080).

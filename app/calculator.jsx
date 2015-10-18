@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 
 export default React.createClass({
   propTypes: {},
@@ -11,7 +11,7 @@ export default React.createClass({
 
   handleChange(event) {
     this.setState({
-      age: parseInt(event.target.value)
+      age: parseInt(event.target.value, 10)
     });
   },
 
