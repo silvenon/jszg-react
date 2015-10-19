@@ -18,22 +18,24 @@ export default React.createClass({
     });
   },
 
-  render() {
-    let message;
-
+  checkAge(){
+    let message = (
+      <Alert type="danger">
+        <p>{`You're too young for dating, go play with lego bricks or something.`}</p>
+      </Alert>
+    );
     if (this.state.age >= 15) {
       message = (
         <Alert type="info">
           <p>{`You are allowed to go ${this.state.age / 2 + 7} years old and above.`}</p>
         </Alert>
       );
-    } else {
-      message = (
-        <Alert type="danger">
-          <p>{`You're too young for dating, go play with lego bricks or something.`}</p>
-        </Alert>
-      );
     }
+    return message;
+  },
+
+  render() {
+    const message = this.checkAge();
 
     return (
       <div>

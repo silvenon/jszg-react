@@ -4,11 +4,22 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool eval --progress --colors --content-base dist"
+    "start": "webpack-dev-server --devtool eval --progress --colors --content-base dist",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": ["react"],
+    "testPathDirs": [
+      "./app/"
+    ]
   },
   "devDependencies": {
+    "babel-jest": "^5.3.0",
     "babel-loader": "^5.3.2",
+    "eslint-plugin-react": "^3.6.2",
     "jsdom": "^7.0.1",
+    "react-addons-test-utils": "^0.14.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
