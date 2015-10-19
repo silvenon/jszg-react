@@ -7,7 +7,7 @@ export default (props) => {
       <label htmlFor={id}>{props.label}</label>
       <input
         id={id}
-        className="form-control"
+        className="form-control age"
         type={props.type}
         onChange={props.onChange}
         value={props.value}
