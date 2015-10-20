@@ -7,7 +7,8 @@
         ],
         "quotes": [
             2,
-            "single"
+            "single",
+            "avoid-escape"
         ],
         "linebreak-style": [
             2,
@@ -46,7 +47,8 @@
     "env": {
         "es6": true,
         "node": true,
-        "browser": true
+        "browser": true,
+        "jest": true
     },
     "ecmaFeatures": {
         "jsx": true,
@@ -55,13 +57,5 @@
     },
     "plugins": [
         "react"
-    ],
-    "globals": {
-      "DefaultRoute": 1,
-      "jest": 1,
-      "describe": 1,
-      "beforeEach": 1,
-      "it": 1,
-      "expect": 1
-    }
+    ]
 }
