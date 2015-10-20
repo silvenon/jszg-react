@@ -8,13 +8,21 @@ export default React.createClass({
 
   getInitialState() {
     return {
-      age: 20
+      age: 20,
+      message: ''
     };
   },
 
   handleChange(event) {
     this.setState({
       age: parseInt(event.target.value)
+    });
+  },
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      message: this.getMessage()
     });
   },
 
@@ -36,18 +44,21 @@ export default React.createClass({
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <Title>Dating Calculator</Title>
+
+        <p>What is your dating pool?</p>
 
         <Field
           label="Your age"
           type="number"
           onChange={this.handleChange}
-          value={this.state.age}
-        />
+          value={this.state.age} />
 
-        {this.getMessage()}
-      </div>
+        <p><button className="btn btn-primary" type="submit">Calculate</button></p>
+
+        {this.state.message}
+      </form>
     );
   }
 });
