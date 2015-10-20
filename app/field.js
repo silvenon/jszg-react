@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => {
+const Field = (props) => {
   const id = props.label.toLowerCase().replace(' ', '-');
   return (
     <div className="form-group">
@@ -15,3 +15,15 @@ export default (props) => {
     </div>
   );
 };
+
+Field.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  type: React.PropTypes.string.isRequired,
+  value: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.number
+  ])
+};
+
+export default Field;
