@@ -8,3 +8,7 @@ For JavaScript Zagreb Meetup.
 ```
 
 Open [localhost:8080](http://localhost:8080).
+
+## Source
+
+<a href="https://xkcd.com/314/"><img src="dating_pools.png"/></a>
