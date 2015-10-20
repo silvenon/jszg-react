@@ -1,7 +1,4 @@
 module.exports = {
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
   entry: './app',
   output: {
     path: './dist',
