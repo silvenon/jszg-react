@@ -26,15 +26,21 @@ export default React.createClass({
     });
   },
 
+  clear() {
+    this.setState({
+      message: ''
+    });
+  },
+
   getMessage() {
     let message = (
-      <Alert type="danger">
+      <Alert type="danger" onClose={this.clear}>
         <p>{`You're too young for dating, go play with lego bricks or something.`}</p>
       </Alert>
     );
     if (this.state.age >= 15) {
       message = (
-        <Alert type="info">
+        <Alert type="info" onClose={this.clear}>
           <p>{`You are allowed to go ${Math.ceil(this.state.age / 2 + 7)} years old and above.`}</p>
         </Alert>
       );
