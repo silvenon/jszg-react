@@ -35,13 +35,13 @@ export default React.createClass({
   getMessage() {
     let message = (
       <Alert type="danger" onClose={this.clear}>
-        <p>{`You're too young for dating, go play with lego bricks or something.`}</p>
+        <p className="alertText">{`You're too young for dating, go play with lego bricks or something.`}</p>
       </Alert>
     );
     if (this.state.age >= 15) {
       message = (
         <Alert type="info" onClose={this.clear}>
-          <p>{`You are allowed to go ${Math.ceil(this.state.age / 2 + 7)} years old and above.`}</p>
+          <p className="alertText">{`You are allowed to go ${Math.ceil(this.state.age / 2 + 7)} years old and above.`}</p>
         </Alert>
       );
     }
@@ -50,7 +50,7 @@ export default React.createClass({
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} ref="form">
         <Title>Dating Calculator</Title>
 
         <p>What is your dating pool?</p>
