@@ -27,7 +27,7 @@ export default React.createClass({
     if (this.state.age >= 15) {
       message = (
         <Alert type="info">
-          <p>{`You are allowed to go ${this.state.age / 2 + 7} years old and above.`}</p>
+          <p>{`You are allowed to go ${Math.ceil(this.state.age / 2 + 7)} years old and above.`}</p>
         </Alert>
       );
     }
