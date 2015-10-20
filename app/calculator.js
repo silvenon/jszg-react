@@ -18,7 +18,7 @@ export default React.createClass({
     });
   },
 
-  checkAge(){
+  getMessage() {
     let message = (
       <Alert type="danger">
         <p>{`You're too young for dating, go play with lego bricks or something.`}</p>
@@ -35,8 +35,6 @@ export default React.createClass({
   },
 
   render() {
-    const message = this.checkAge();
-
     return (
       <div>
         <Title>Dating Calculator</Title>
@@ -48,7 +46,7 @@ export default React.createClass({
           value={this.state.age}
         />
 
-        {message}
+        {this.getMessage()}
       </div>
     );
   }
