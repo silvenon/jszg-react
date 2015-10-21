@@ -4,7 +4,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool eval --progress --colors --content-base dist"
+    "start": "webpack-dev-server --devtool eval --progress --colors --content-base dist",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "babel-loader": "^5.3.2",
