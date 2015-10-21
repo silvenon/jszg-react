@@ -51,9 +51,9 @@ export default React.createClass({
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <Title>Dating Calculator</Title>
+        <Title>{'Dating Calculator'}</Title>
 
-        <p>What is your dating pool?</p>
+        <p>{'What is your dating pool?'}</p>
 
         <Field
           label="Your age"
@@ -61,7 +61,7 @@ export default React.createClass({
           onChange={this.handleChange}
           value={this.state.age} />
 
-        <p><button className="btn btn-primary" type="submit">Calculate</button></p>
+        <p><button className="btn btn-primary" type="submit">{'Calculate'}</button></p>
 
         {this.state.message}
       </form>
