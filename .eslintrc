@@ -1,6 +1,17 @@
 {
   "root": true,
   "extends": "eslint:recommended",
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
   "rules": {
     "jsx-quotes": [2, "prefer-double"],
     "react/display-name": 0,
@@ -25,16 +36,5 @@
     "react/self-closing-comp": 2,
     "react/sort-comp": 0,
     "react/wrap-multilines": 2
-  },
-  "env": {
-    "es6": true,
-    "browser": true
-  },
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
-  "plugins": [
-    "react"
-  ]
+  }
 }
