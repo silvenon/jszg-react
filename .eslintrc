@@ -1,12 +1,7 @@
 {
   "root": true,
+  "extends": "eslint:recommended",
   "rules": {
-    "indent": [2, 2],
-    "quotes": [2, "single", "avoid-escape"],
-    "linebreak-style": [2, "unix"],
-    "semi": [2, "always"],
-    "comma-dangle": [2, "never"],
-    "func-names": 0,
     "jsx-quotes": [2, "prefer-double"],
     "react/display-name": 0,
     "react/jsx-boolean-value": 2,
@@ -33,12 +28,10 @@
   },
   "env": {
     "es6": true,
-    "node": true,
     "browser": true
   },
   "ecmaFeatures": {
     "jsx": true,
-    "experimentalObjectRestSpread": true,
     "modules": true
   },
   "plugins": [

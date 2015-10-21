@@ -1,3 +1,4 @@
+/* eslint-env node */
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
